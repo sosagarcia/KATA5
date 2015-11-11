@@ -12,11 +12,11 @@ import java.sql.Statement;
 
 public class KATA5 {
 
-    @SuppressWarnings("empty-statement")
+    //@SuppressWarnings("empty-statement")
     public static void main(String[] args) throws SQLException, ClassNotFoundException, IOException {
        //Class.forName("org.sqlite.JDBC");
        Class.forName("oracle.jdbc.driver.OracleDriver");
-       Connection conec = DriverManager.getConnection("jdbc:sqlite:DDBAKATA5"); 
+       Connection conec = DriverManager.getConnection("jdbc:oracle:thin:@10.22.143.90:1521:orcl","system","orcl"); 
        Statement state = conec.createStatement();
        ResultSet rs = state.executeQuery("SELECT * FROM EMAILS");
        
